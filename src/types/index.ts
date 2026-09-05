@@ -10,7 +10,7 @@ export interface BaseMeta {
 }
 
 export interface ProjectMeta extends BaseMeta {
-  category: 'research' | 'teaching' | 'open-source' | 'industry';
+  category: 'research' | 'teaching' | 'open-source' | 'industry' | 'creative';
   shortDescription: Record<Locale, string>;
   thumbnail?: string;
   techStack: string[];

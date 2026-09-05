@@ -9,7 +9,7 @@ Disallow: /_next/
 Disallow: /assets/
 
 # Host
-Host: https://example-placeholder.local
+Host: https://yourdomain.com
 
 # Sitemaps
-Sitemap: https://example-placeholder.local/sitemap.xml
+Sitemap: https://yourdomain.com/sitemap.xml

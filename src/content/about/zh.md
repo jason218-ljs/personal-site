@@ -7,6 +7,8 @@ bio:
 
     2026 年暑期，我在星环科技（Transwarp）人工智能产品部担任量化研究员，作为 5 人投资决策委员会成员（持风控否决权）参与 AI-Native 组合投资项目：主导开发多因子选股回测系统 AlphaForge 与事件驱动回测引擎，主导设计"工程 / 数据 / 认知"三大飞轮自进化系统，并作为第三发明人参与一项面向大语言模型智能体可信控制的国家发明专利申请（申请中）。
 
+    此前，我参加毓琇书院"青年科学家成长营"新生早期科研训练，在社交媒体投资者情绪研究课题中担任小组爬虫开发主力；课外参与以南大前身国立中央大学抗战西迁为题材的 AI 纪录片制作，运用 Seedance 2.0 完成约 330 条 AI 视频的提示词工程、生成与剪辑。
+
     我习惯"结论必须可追溯"——每条规则有依据、每个结果可复盘，期望在量化研究与金融科技方向长期发展。欢迎通过邮件与我交流。
   en: |
     I am Junsen Li, a sophomore in the CS-Finance Experimental Class at the School of Engineering Management, Nanjing University (GPA 4.28/5.0), focusing on quantitative research and fintech.
@@ -38,6 +40,26 @@ experience:
     description:
       zh: "AI-Native 组合投资项目 · 5 人投资决策委员会成员（持风控否决权），负责因子打分、组合构建、回测校验、风险检查与归因复盘"
       en: "AI-native portfolio program · member of a 5-person investment committee with risk veto; owned factor scoring, portfolio construction, backtest validation, risk checks, and attribution review"
+  - title:
+      zh: "新生早期科研训练 · 爬虫开发主力"
+      en: "Early Research Training · Lead Crawler Developer"
+    institution:
+      zh: "毓琇书院“青年科学家成长营”"
+      en: "Yuxiu College · \"Young Scientist Growth Camp\""
+    period: "2026.03 – 2026.06"
+    description:
+      zh: "社交媒体投资者情绪与市场关注度研究 · 基于 Requests 与浏览器自动化采集雪球网数据，参与 A 股股吧情绪标注与标注手册提炼"
+      en: "Social-media investor sentiment study · collected Xueqiu data with Requests and browser automation; A-share forum sentiment annotation and guideline distillation"
+  - title:
+      zh: "AI 视频制作与剪辑"
+      en: "AI Video Production & Editing"
+    institution:
+      zh: "南京大学西迁纪录片（校外项目）"
+      en: "NJU Wartime Relocation Documentary (off-campus project)"
+    period: "2025.12 – 2026.06"
+    description:
+      zh: "运用 Seedance 2.0 完成约 330 条 AI 视频的提示词工程、生成与剪映剪辑，题材为国立中央大学抗战西迁历史"
+      en: "Prompt engineering, generation, and editing of ~330 Seedance 2.0 AI clips on the wartime relocation of National Central University"
 awards:
   - title:
       zh: "发明专利《一种智能体不确定性可信约束的方法与系统》（申请中）"
@@ -55,4 +77,4 @@ awards:
       en: "CS-Finance Experimental Class, Nanjing University"
 ---
 
-南京大学计算机金融实验班在读本科生，聚焦量化研究与金融科技：多因子选股、事件驱动回测、AI Agent 与数据分析。曾于星环科技（Transwarp）人工智能产品部担任量化研究员实习，参与 AI-Native 组合投资项目，主导开发多因子选股回测系统 AlphaForge 与三大飞轮自进化系统。全国大学生数学建模竞赛备赛中（编程手），MEM 课程项目"企业管理数据分析助手"核心开发。
+南京大学计算机金融实验班在读本科生，聚焦量化研究与金融科技：多因子选股、事件驱动回测、AI Agent 与数据分析。曾于星环科技（Transwarp）人工智能产品部担任量化研究员实习，参与 AI-Native 组合投资项目，主导开发多因子选股回测系统 AlphaForge 与三大飞轮自进化系统。毓琇书院"青年科学家成长营"早期科研训练（社交媒体投资者情绪研究 · 爬虫开发主力），南大西迁 AI 纪录片制作（Seedance 2.0 · 约 330 条视频）。全国大学生数学建模竞赛备赛中（编程手），MEM 课程项目"企业管理数据分析助手"核心开发。

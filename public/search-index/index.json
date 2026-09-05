@@ -130,6 +130,51 @@
     ]
   },
   {
+    "slug": "investor-sentiment",
+    "title": {
+      "zh": "社交媒体投资者情绪与市场关注度研究",
+      "en": "Social-Media Investor Sentiment and Market Attention"
+    },
+    "type": "project",
+    "url": {
+      "zh": "/zh/projects/investor-sentiment",
+      "en": "/en/projects/investor-sentiment"
+    },
+    "content": {
+      "zh": "项目背景\n\n毓琇书院第三届“青年科学家成长营”新生早期科研训练项目（2026.03 – 2026.06）。课题为多平台（StockTwits / X / Seeking Alpha）投资者情绪与市场关注度的对比研究，采用大模型辅助标注与 Python 数据处理。我在小组中担任爬虫开发主力，并参与情绪标注工作。\n\n爬虫开发（主力负责）\n数据采集：基于 Requests 与浏览器自动化，分三批采集雪球网用户关注与发帖数据\n反爬应对：处理动态加载内容与平台反爬机制，保障采集任务可持续运行\n数据治理：完成去重与清洗，输出数据质量说明文档，保证后续研究的可靠性\n\n情绪标注\n完成 A 股股吧帖子投资情绪标注（看涨 / 看跌 / 中性）\n将标注手册提炼为速查要点，提升小组标注效率与一致性\n\n我的收获\n\n第一次完整参与学术研究流程：从数据采集、清洗，到标注规范制定与执行。直观体会到\"数据质量决定研究上限\"——爬虫拿到多少数据固然重要，但去重、清洗与质量说明才是让数据可用、让结论可信的关键。",
+      "en": "Background\n\nEarly-research training project at Yuxiu College's third \"Young Scientist Growth Camp\" (Mar – Jun 2026): a comparative study of investor sentiment and market attention across StockTwits, X, and Seeking Alpha, using LLM-assisted annotation and Python data processing. I served as the team's lead crawler developer and worked on sentiment annotation.\n\nCrawler Development (Lead Role)\nData collection: built Xueqiu crawlers with Requests and browser automation, collecting user-follow and po"
+    },
+    "tags": [
+      "Python",
+      "Requests",
+      "网络爬虫",
+      "大模型辅助标注",
+      "pandas"
+    ]
+  },
+  {
+    "slug": "wartime-relocation-documentary",
+    "title": {
+      "zh": "《重走西迁路》· AI 历史影像复原纪录片",
+      "en": "Retracing the Wartime Relocation · AI-Restored Historical Documentary"
+    },
+    "type": "project",
+    "url": {
+      "zh": "/zh/projects/wartime-relocation-documentary",
+      "en": "/en/projects/wartime-relocation-documentary"
+    },
+    "content": {
+      "zh": "项目背景\n\n2025.12 – 2026.06，我参与了一部以南京大学前身——国立中央大学抗战西迁（1937）为题材的纪录片 AI 视频制作项目。历史影像几乎无存，项目用 Seedance 2.0 AI 视频生成技术\"复原\"西迁沿途场景，沿南京 → 武汉 → 宜昌 → 重庆 → 成都的西迁路线逐段制作。我负责从史料研究、场景策划、提示词撰写、AI 视频生成到剪映剪辑的全流程，累计完成约 330 条 AI 生成视频的制作与后期。\n\n五段路线\n下关码头（南京出发）：1937 年深秋师生从南京下关码头登船西撤，完成两轮大版本迭代（每版 6 场景，共约 75 条视频）\n粤汉码头（武汉中转）：西迁队伍抵达武汉后的中转过程，6 场景约 35 条\n宜昌码头（核心段落）：以 1938 年宜昌大撤退与卢作孚民生公司\"三段航行\"为叙事主线，将 6 大场景细化为 16 个子场景，约 77 条\n重庆（抵达与重建）：沙坪坝松林坡 40 天建校、柏溪分校、王酉亭\"动物大军\"抵渝等，约 52 条\n成都（金陵大学分部）：华西坝五大学联合办学，约 52 条\n\n提示词工程\n物理真实度：针对 AI 生成人物漂浮、肢体变形问",
+      "en": "Background\n\nFrom Dec 2025 to Jun 2026, I worked on an AI-generated documentary about the wartime relocation of National Central University — Nanjing University's predecessor — during the Second Sino-Japanese War (1937). With almost no historical footage surviving, the project used Seedance 2.0 to \"restore\" scenes along the relocation route: Nanjing → Wuhan → Yichang → Chongqing → Chengdu. I handled the full pipeline — historical research, scene planning, prompt writing, AI generation, and editin"
+    },
+    "tags": [
+      "Seedance 2.0",
+      "提示词工程",
+      "剪映",
+      "史料考证"
+    ]
+  },
+  {
     "slug": "about",
     "title": {
       "zh": "关于我",
@@ -141,8 +186,8 @@
       "en": "/en/about"
     },
     "content": {
-      "zh": "南京大学计算机金融实验班在读本科生，聚焦量化研究与金融科技：多因子选股、事件驱动回测、AI Agent 与数据分析。曾于星环科技（Transwarp）人工智能产品部担任量化研究员实习，参与 AI-Native 组合投资项目，主导开发多因子选股回测系统 AlphaForge 与三大飞轮自进化系统。全国大学生数学建模竞赛备赛中（编程手），MEM 课程项目\"企业管理数据分析助手\"核心开发。",
-      "en": "Undergraduate in the CS-Finance Experimental Class at Nanjing University, focusing on quantitative research and fintech: multi-factor stock screening, event-driven backtesting, AI agents, and data analytics. Former quantitative researcher intern at Transwarp Technology's AI Product Department, working on an AI-native portfolio program; led development of AlphaForge and a three-flywheel self-evolution system. Programmer for the China Undergraduate Mathematical Contest in Modeling (CUMCM, in preparation) and core developer of the MEM course project \"Data Analytics Assistant for Enterprise Management\"."
+      "zh": "南京大学计算机金融实验班在读本科生，聚焦量化研究与金融科技：多因子选股、事件驱动回测、AI Agent 与数据分析。曾于星环科技（Transwarp）人工智能产品部担任量化研究员实习，参与 AI-Native 组合投资项目，主导开发多因子选股回测系统 AlphaForge 与三大飞轮自进化系统。毓琇书院\"青年科学家成长营\"早期科研训练（社交媒体投资者情绪研究 · 爬虫开发主力），南大西迁 AI 纪录片制作（Seedance 2.0 · 约 330 条视频）。全国大学生数学建模竞赛备赛中（编程手），MEM 课程项目\"企业管理数据分析助手\"核心开发。",
+      "en": "Undergraduate in the CS-Finance Experimental Class at Nanjing University, focusing on quantitative research and fintech: multi-factor stock screening, event-driven backtesting, AI agents, and data analytics. Former quantitative researcher intern at Transwarp Technology's AI Product Department, working on an AI-native portfolio program; led development of AlphaForge and a three-flywheel self-evolution system. Early-research trainee at Yuxiu College's \"Young Scientist Growth Camp\" (social-media investor sentiment study, lead crawler developer), and AI video producer for a documentary on NJU's wartime relocation (~330 Seedance 2.0 clips). Programmer for the China Undergraduate Mathematical Contest in Modeling (CUMCM, in preparation) and core developer of the MEM course project \"Data Analytics Assistant for Enterprise Management\"."
     },
     "tags": []
   },

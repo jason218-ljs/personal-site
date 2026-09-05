@@ -62,6 +62,7 @@ const categoryLabels: Record<string, Record<'zh' | 'en', string>> = {
   teaching: { zh: '教学', en: 'Teaching' },
   'open-source': { zh: '开源', en: 'Open Source' },
   industry: { zh: '工业', en: 'Industry' },
+  creative: { zh: '创作', en: 'Creative' },
 };
 
 export function ProjectDetailPage({ locale, project }: ProjectDetailPageProps) {

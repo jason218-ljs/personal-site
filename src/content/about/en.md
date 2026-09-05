@@ -15,6 +15,8 @@ bio:
 
     In summer 2026, I interned as a quantitative researcher at Transwarp Technology's AI Product Department. As a member of a five-person investment committee with risk veto in an AI-native portfolio program, I led the development of AlphaForge (a multi-factor screening and backtesting system) and an event-driven backtesting engine, led the design of a three-flywheel self-evolution system, and contributed as third inventor to a pending national patent on trustworthy control of LLM-based agents.
 
+    Before that, I joined Yuxiu College's early-research training program as lead crawler developer for a social-media investor-sentiment study, and worked on an AI-generated documentary about the wartime relocation of National Central University (Nanjing University's predecessor) — ~330 Seedance 2.0 clips from prompt engineering to final edit.
+
     I believe every conclusion must be traceable — every rule has a rationale, and every result can be audited. Feel free to reach out by email.
 education:
   - degree:
@@ -38,6 +40,26 @@ experience:
     description:
       zh: "AI-Native 组合投资项目 · 5 人投资决策委员会成员（持风控否决权），负责因子打分、组合构建、回测校验、风险检查与归因复盘"
       en: "AI-native portfolio program · member of a 5-person investment committee with risk veto; owned factor scoring, portfolio construction, backtest validation, risk checks, and attribution review"
+  - title:
+      zh: "新生早期科研训练 · 爬虫开发主力"
+      en: "Early Research Training · Lead Crawler Developer"
+    institution:
+      zh: "毓琇书院“青年科学家成长营”"
+      en: "Yuxiu College · \"Young Scientist Growth Camp\""
+    period: "2026.03 – 2026.06"
+    description:
+      zh: "社交媒体投资者情绪与市场关注度研究 · 基于 Requests 与浏览器自动化采集雪球网数据，参与 A 股股吧情绪标注与标注手册提炼"
+      en: "Social-media investor sentiment study · collected Xueqiu data with Requests and browser automation; A-share forum sentiment annotation and guideline distillation"
+  - title:
+      zh: "AI 视频制作与剪辑"
+      en: "AI Video Production & Editing"
+    institution:
+      zh: "南京大学西迁纪录片（校外项目）"
+      en: "NJU Wartime Relocation Documentary (off-campus project)"
+    period: "2025.12 – 2026.06"
+    description:
+      zh: "运用 Seedance 2.0 完成约 330 条 AI 视频的提示词工程、生成与剪映剪辑，题材为国立中央大学抗战西迁历史"
+      en: "Prompt engineering, generation, and editing of ~330 Seedance 2.0 AI clips on the wartime relocation of National Central University"
 awards:
   - title:
       zh: "发明专利《一种智能体不确定性可信约束的方法与系统》（申请中）"
@@ -55,4 +77,4 @@ awards:
       en: "CS-Finance Experimental Class, Nanjing University"
 ---
 
-Undergraduate in the CS-Finance Experimental Class at Nanjing University, focusing on quantitative research and fintech: multi-factor stock screening, event-driven backtesting, AI agents, and data analytics. Former quantitative researcher intern at Transwarp Technology's AI Product Department, working on an AI-native portfolio program; led development of AlphaForge and a three-flywheel self-evolution system. Programmer for the China Undergraduate Mathematical Contest in Modeling (CUMCM, in preparation) and core developer of the MEM course project "Data Analytics Assistant for Enterprise Management".
+Undergraduate in the CS-Finance Experimental Class at Nanjing University, focusing on quantitative research and fintech: multi-factor stock screening, event-driven backtesting, AI agents, and data analytics. Former quantitative researcher intern at Transwarp Technology's AI Product Department, working on an AI-native portfolio program; led development of AlphaForge and a three-flywheel self-evolution system. Early-research trainee at Yuxiu College's "Young Scientist Growth Camp" (social-media investor sentiment study, lead crawler developer), and AI video producer for a documentary on NJU's wartime relocation (~330 Seedance 2.0 clips). Programmer for the China Undergraduate Mathematical Contest in Modeling (CUMCM, in preparation) and core developer of the MEM course project "Data Analytics Assistant for Enterprise Management".

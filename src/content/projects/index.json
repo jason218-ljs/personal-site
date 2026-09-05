@@ -100,5 +100,40 @@
     "order": 6,
     "date": "2026-09-01",
     "tags": ["Course Project", "Compliance Analytics", "Team Project"]
+  },
+  {
+    "slug": "investor-sentiment",
+    "title": {
+      "zh": "社交媒体投资者情绪与市场关注度研究",
+      "en": "Social-Media Investor Sentiment and Market Attention"
+    },
+    "category": "research",
+    "shortDescription": {
+      "zh": "毓琇书院“青年科学家成长营”新生早期科研项目：担任小组爬虫开发主力，基于 Requests 与浏览器自动化分三批采集雪球网数据并完成清洗与质量说明，参与 A 股股吧帖子情绪标注与标注手册提炼。",
+      "en": "Early-research training project at Yuxiu College's \"Young Scientist Growth Camp\": lead crawler developer, collecting Xueqiu data with Requests and browser automation in three batches, plus A-share sentiment annotation and guideline distillation."
+    },
+    "techStack": ["Python", "Requests", "网络爬虫", "大模型辅助标注", "pandas"],
+    "featured": false,
+    "order": 7,
+    "date": "2026-06-20",
+    "tags": ["Investor Sentiment", "Web Scraping", "Behavioral Finance"]
+  },
+  {
+    "slug": "wartime-relocation-documentary",
+    "title": {
+      "zh": "《重走西迁路》· AI 历史影像复原纪录片",
+      "en": "Retracing the Wartime Relocation · AI-Restored Historical Documentary"
+    },
+    "category": "creative",
+    "shortDescription": {
+      "zh": "校外 AI 视频创作项目：以南大前身国立中央大学抗战西迁为题材，运用 Seedance 2.0 沿“南京—武汉—宜昌—重庆—成都”路线完成约 330 条 AI 视频的提示词工程、生成与剪辑，负责从史料研究到后期剪辑的全流程。",
+      "en": "AI video project on the wartime relocation of Nanjing University's predecessor (National Central University): prompt engineering, generation, and editing of ~330 AI clips with Seedance 2.0 along the Nanjing–Wuhan–Yichang–Chongqing–Chengdu route."
+    },
+    "techStack": ["Seedance 2.0", "提示词工程", "剪映", "史料考证"],
+    "thumbnail": "/assets/images/projects/documentary-thumb.jpg",
+    "featured": false,
+    "order": 8,
+    "date": "2026-06-24",
+    "tags": ["AI Video Generation", "Digital Humanities", "Creative Production"]
   }
 ]
