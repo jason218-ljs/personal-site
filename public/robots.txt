@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /assets/
+
+# Host
+Host: https://example-placeholder.local
+
+# Sitemaps
+Sitemap: https://example-placeholder.local/sitemap.xml

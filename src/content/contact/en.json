@@ -1,0 +1,33 @@
+{
+  "email": "251275042@smail.nju.edu.cn",
+  "office": {
+    "zh": "南京大学 · 工程管理学院",
+    "en": "School of Engineering Management, Nanjing University"
+  },
+  "address": {
+    "zh": "中国 · 江苏",
+    "en": "Jiangsu, China"
+  },
+  "availability": {
+    "zh": "学期中通常 48 小时内回复邮件。欢迎实习机会、量化/数据类项目合作洽谈；无关推销请勿扰。",
+    "en": "Usually reply within 48 hours during semesters. Open to internship opportunities and quantitative / data project collaborations. No solicitations, please."
+  },
+  "social": [
+    {
+      "label": {
+        "zh": "邮箱",
+        "en": "Email"
+      },
+      "url": "mailto:251275042@smail.nju.edu.cn",
+      "icon": "Mail"
+    },
+    {
+      "label": {
+        "zh": "GitHub",
+        "en": "GitHub"
+      },
+      "url": "https://github.com/jason218-ljs",
+      "icon": "GitBranch"
+    }
+  ]
+}
