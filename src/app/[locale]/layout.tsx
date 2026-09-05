@@ -1,6 +1,7 @@
+import { notFound } from 'next/navigation';
 import { ClientHeader } from '@/components/layout/ClientHeader';
 import { Footer } from '@/components/layout/Footer';
-import { Locale, isValidLocale, defaultLocale } from '@/content/config/i18n';
+import { isValidLocale } from '@/content/config/i18n';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 
 interface LocaleLayoutProps {
@@ -10,14 +11,14 @@ interface LocaleLayoutProps {
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale } = await params;
-  const validLocale = isValidLocale(locale) ? locale : defaultLocale;
+  if (!isValidLocale(locale)) notFound();
 
   return (
     <ThemeProvider>
       <div className="flex min-h-screen flex-col">
-        <ClientHeader locale={validLocale} />
+        <ClientHeader locale={locale} />
         <main className="flex-1">{children}</main>
-        <Footer locale={validLocale} />
+        <Footer locale={locale} />
       </div>
     </ThemeProvider>
   );

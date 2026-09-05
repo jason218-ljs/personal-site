@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/zh",
+      "statusCode": 301
+    },
+    {
+      "source": "/projects",
+      "destination": "/zh/projects",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/zh/contact",
+      "statusCode": 301
+    }
+  ]
+}
