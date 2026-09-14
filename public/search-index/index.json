@@ -1,92 +1,5 @@
 [
   {
-    "slug": "alphaforge",
-    "title": {
-      "zh": "AlphaForge · 多因子选股系统",
-      "en": "AlphaForge · Multi-Factor Stock Screening System"
-    },
-    "type": "project",
-    "url": {
-      "zh": "/zh/projects/alphaforge",
-      "en": "/en/projects/alphaforge"
-    },
-    "content": {
-      "zh": "项目背景\n\n星环科技（Transwarp）实习期间，在 AI-Native 组合投资项目中担任量化研究员，作为 5 人投资决策委员会成员（持风控否决权）负责因子打分与组合构建。AlphaForge 是我为项目主导开发的多因子选股回测系统，解决的核心问题是：如何让选股结论可解释、可追溯、可复盘，而不是黑箱输出。\n\n核心设计\n三层 100 分制评分体系：基本面 / 技术面 / 资金面三层打分，各层因子权重显式可调，每一分的扣减都能回溯到具体因子与规则\n21 个二级行业自适应阈值：不同行业的因子分布差异巨大，固定阈值会造成系统性偏差；系统按二级行业自适应调整打分阈值\n两段式选股：\"形态预过滤 + 质量打分\"——先用形态规则过滤掉不合格标的，再对候选池做质量评分，兼顾效率与精度\n\n工程化保障\n214 个自动化测试：pytest 覆盖打分逻辑、阈值调整、数据边界等关键路径，保证规则迭代不引入回归\nWeb 可视化看板：打分结果、因子暴露、筛选漏斗全流程可视化，支撑投资决策委员会的复盘讨论\n\n我的角色\n\n主导开发：评分体系与行业阈值设计、两段式选股逻辑实现、自动化测试体系与可视化看板搭建。",
-      "en": "Background\n\nDuring my quantitative researcher internship at Transwarp Technology, I served on a five-person investment committee (with risk veto) in an AI-native portfolio program, owning factor scoring and portfolio construction. AlphaForge is the multi-factor stock-screening and backtesting system I led for this program. The core problem it solves: making stock-selection conclusions explainable, traceable, and reviewable rather than black-box outputs.\n\nKey Design\nThree-layer 100-point scoring "
-    },
-    "tags": [
-      "Python",
-      "pandas",
-      "NumPy",
-      "pytest",
-      "数据可视化"
-    ]
-  },
-  {
-    "slug": "quantbacktest",
-    "title": {
-      "zh": "事件驱动回测引擎",
-      "en": "Event-Driven Backtesting Engine"
-    },
-    "type": "project",
-    "url": {
-      "zh": "/zh/projects/quantbacktest",
-      "en": "/en/projects/quantbacktest"
-    },
-    "content": {
-      "zh": "项目背景\n\n回测的意义在于\"接近真实地\"检验策略——如果回测引擎忽略了交易摩擦，结论就会系统性高估收益。在星环科技实习期间，我实现了完整建模 A 股市场规则的事件驱动回测引擎，作为 AlphaForge 多因子策略的验证底座。\n\n交易摩擦建模\nT+1 交易制度：当日买入次日才能卖出，约束调仓行为\n涨跌停限制：触及涨跌停无法成交，避免\"不可能成交的收益\"\n印花税与滑点：按真实税率与冲击成本计入交易成本\n事件驱动架构：以事件序列驱动撮合逻辑，天然贴近真实交易流程\n\n仓位管理\n凯利公式仓位：基于策略胜率与赔率计算理论最优仓位\n单票仓位约束：限制个股集中度，防范单一标的黑天鹅\n行业风险系数调整：按行业风险水平动态调整该行业持仓上限\n\n验证结果\n\n基于真实 A 股数据完成多因子策略回测，策略相对市场基准实现正向超额收益；回测引擎同步输出风险指标与业绩归因，支撑投资决策委员会的复盘。",
-      "en": "Background\n\nBacktesting is only meaningful when it approximates reality — an engine that ignores market frictions systematically overstates returns. During my Transwarp internship, I built an event-driven backtesting engine that fully models A-share market rules, serving as the validation foundation for AlphaForge's multi-factor strategies.\n\nMarket-Friction Modeling\nT+1 settlement: shares bought today can only be sold tomorrow, constraining rebalancing behavior\nPrice limits: orders at limit-up/l"
-    },
-    "tags": [
-      "Python",
-      "pandas",
-      "量化建模"
-    ]
-  },
-  {
-    "slug": "three-flywheels",
-    "title": {
-      "zh": "“工程 / 数据 / 认知”三大飞轮自进化系统",
-      "en": "Three-Flywheel Self-Evolution System"
-    },
-    "type": "project",
-    "url": {
-      "zh": "/zh/projects/three-flywheels",
-      "en": "/en/projects/three-flywheels"
-    },
-    "content": {
-      "zh": "项目背景\n\n量化研究系统的长期价值不在于某一次选股结果，而在于研究流程本身能否持续自我改进。在星环科技实习期间，我主导设计了\"工程 / 数据 / 认知\"三大飞轮自进化系统，让研究流水线在真实运行中不断发现问题、沉淀方法论。\n\n三大飞轮\n工程飞轮：CI 流水线 + 静态红线扫描（基于 AST 的代码规则检查），在提交阶段拦截质量风险\n数据飞轮：数据质量自动检测，覆盖缺失、异常、口径漂移等问题——真实运行中自动检出了数据缺失问题\n认知飞轮：方法论复盘机制，将每次投资决策的依据与结果沉淀为可检索的复盘记录\n\n架构决策\n零侵入旁路架构：飞轮系统以旁路方式接入主流程，不改动核心交易逻辑，失败也不阻塞主流程\n62 个单元测试：飞轮自身的可靠性由测试保障，避免\"质量系统本身成为质量风险\"\n\n我的角色\n\n主导设计：三大飞轮体系设计、零侵入旁路架构、数据质量检测与静态红线扫描实现。",
-      "en": "Background\n\nThe long-term value of a quant research system lies not in any single stock pick, but in whether the research process itself keeps improving. During my Transwarp internship, I led the design of a three-flywheel self-evolution system that continuously surfaces problems and accumulates methodology while the pipeline runs in production.\n\nThe Three Flywheels\nEngineering flywheel: CI pipelines plus AST-based static rule checks (\"red-line scanning\") that intercept quality risks at commit t"
-    },
-    "tags": [
-      "Python",
-      "pytest",
-      "CI/CD",
-      "AST 分析"
-    ]
-  },
-  {
-    "slug": "buffett-value-agent",
-    "title": {
-      "zh": "Buffett-Value-Agent · 价值投资智能体",
-      "en": "Buffett-Value-Agent · Value-Investing AI Agent"
-    },
-    "type": "project",
-    "url": {
-      "zh": "/zh/projects/buffett-value-agent",
-      "en": "/en/projects/buffett-value-agent"
-    },
-    "content": {
-      "zh": "项目背景\n\n星环科技实习期间参与研发的价值投资智能体 Buffett-Value-Agent：以大语言模型为认知核心、以巴菲特式价值投资框架为方法论，辅助投研流程。项目的关键设计是人机边界协议（HABP，Human-AI Boundary Protocol）——明确划分哪些任务交给模型、哪些必须由确定性规则与人来兜底。\n\n我的工作\n\n负责人机边界协议下确定性任务的规则实现：\n财务计算模块：估值与财务指标计算不经过大模型，全部以规则化代码实现，保证数字精确可复算\n风控校验模块：投资建议在输出前经过规则化风控校验（仓位、集中度、负面清单等），不合规建议直接拦截\n\n设计思考\n\n大模型擅长语义理解与开放式推理，但不适合承担要求 100% 精确的计算与校验。把确定性任务从模型中剥离为规则模块，是让 AI 系统在金融场景可信落地的关键一步——这也与我在专利工作中关注的\"智能体可信约束\"一脉相承。",
-      "en": "Background\n\nBuffett-Value-Agent is a value-investing AI agent I contributed to during my Transwarp internship: an LLM-powered cognitive core guided by a Buffett-style value-investing framework to assist investment research. Its key design is the Human-AI Boundary Protocol (HABP) — an explicit division of which tasks go to the model and which must be handled by deterministic rules and humans.\n\nMy Work\n\nRule-based implementation of deterministic tasks under the boundary protocol:\nFinancial computa"
-    },
-    "tags": [
-      "Python",
-      "LLM Agent",
-      "规则引擎"
-    ]
-  },
-  {
     "slug": "radio-source-localization",
     "title": {
       "zh": "2026 国赛 B 题 · 无线电干扰源的快速自动定位与清除",
@@ -110,10 +23,101 @@
     ]
   },
   {
+    "slug": "three-flywheels",
+    "title": {
+      "zh": "“工程 / 数据 / 认知”三大飞轮自进化系统",
+      "en": "Three-Flywheel Self-Evolution System"
+    },
+    "type": "project",
+    "url": {
+      "zh": "/zh/projects/three-flywheels",
+      "en": "/en/projects/three-flywheels"
+    },
+    "content": {
+      "zh": "项目背景\n\n量化研究系统的长期价值不在于某一次选股结果，而在于研究流程本身能否持续自我改进。在星环科技实习期间，我主导设计了\"工程 / 数据 / 认知\"三大飞轮自进化系统，让研究流水线在真实运行中不断发现问题、沉淀方法论。\n\n三大飞轮\n工程飞轮：CI 流水线 + 静态红线扫描（基于 AST 的代码规则检查），在提交阶段拦截质量风险\n数据飞轮：数据质量自动检测，覆盖缺失、异常、口径漂移等问题——真实运行中自动检出了数据缺失问题\n认知飞轮：方法论复盘机制，将每次投资决策的依据与结果沉淀为可检索的复盘记录\n\n架构决策\n零侵入旁路架构：飞轮系统以旁路方式接入主流程，不改动核心交易逻辑，失败也不阻塞主流程\n62 个单元测试：飞轮自身的可靠性由测试保障，避免\"质量系统本身成为质量风险\"\n\n我的角色\n\n主导设计：三大飞轮体系设计、零侵入旁路架构、数据质量检测与静态红线扫描实现。",
+      "en": "Background\n\nThe long-term value of a quant research system lies not in any single stock pick, but in whether the research process itself keeps improving. During my Transwarp internship, I led the design of a three-flywheel self-evolution system that continuously surfaces problems and accumulates methodology while the pipeline runs in production.\n\nThe Three Flywheels\nEngineering flywheel: CI pipelines plus AST-based static rule checks (\"red-line scanning\") that intercept quality risks at commit t"
+    },
+    "tags": [
+      "Python",
+      "pytest",
+      "GitHub Actions CI",
+      "AST 静态分析",
+      "架构设计"
+    ]
+  },
+  {
+    "slug": "buffett-value-agent",
+    "title": {
+      "zh": "Buffett-Value-Agent · 价值投资智能体",
+      "en": "Buffett-Value-Agent · Value-Investing AI Agent"
+    },
+    "type": "project",
+    "url": {
+      "zh": "/zh/projects/buffett-value-agent",
+      "en": "/en/projects/buffett-value-agent"
+    },
+    "content": {
+      "zh": "项目背景\n\n星环科技实习期间参与研发的价值投资智能体 Buffett-Value-Agent：以大语言模型为认知核心、以巴菲特式价值投资框架为方法论，辅助投研流程。项目的关键设计是人机边界协议（HABP，Human-AI Boundary Protocol）——明确划分哪些任务交给模型、哪些必须由确定性规则与人来兜底。\n\n我的工作\n\n负责人机边界协议下确定性任务的规则实现：\n财务计算模块：估值与财务指标计算不经过大模型，全部以规则化代码实现，保证数字精确可复算\n风控校验模块：投资建议在输出前经过规则化风控校验（仓位、集中度、负面清单等），不合规建议直接拦截\n\n设计思考\n\n大模型擅长语义理解与开放式推理，但不适合承担要求 100% 精确的计算与校验。把确定性任务从模型中剥离为规则模块，是让 AI 系统在金融场景可信落地的关键一步——这也与我在专利工作中关注的\"智能体可信约束\"一脉相承。",
+      "en": "Background\n\nBuffett-Value-Agent is a value-investing AI agent I contributed to during my Transwarp internship: an LLM-powered cognitive core guided by a Buffett-style value-investing framework to assist investment research. Its key design is the Human-AI Boundary Protocol (HABP) — an explicit division of which tasks go to the model and which must be handled by deterministic rules and humans.\n\nMy Work\n\nRule-based implementation of deterministic tasks under the boundary protocol:\nFinancial computa"
+    },
+    "tags": [
+      "LLM Agent",
+      "提示词工程",
+      "人机边界协议 HABP",
+      "规则引擎",
+      "Python"
+    ]
+  },
+  {
+    "slug": "alphaforge",
+    "title": {
+      "zh": "AlphaForge · 多因子选股与回测系统",
+      "en": "AlphaForge · Multi-Factor Screening & Backtesting System"
+    },
+    "type": "project",
+    "url": {
+      "zh": "/zh/projects/alphaforge",
+      "en": "/en/projects/alphaforge"
+    },
+    "content": {
+      "zh": "项目背景\n\n星环科技（Transwarp）实习期间，在 AI-Native 组合投资项目中担任量化研究员，作为 5 人投资决策委员会成员（持风控否决权）负责因子打分与组合构建。AlphaForge 是我为项目主导开发的多因子选股回测系统，解决的核心问题是：如何让选股结论可解释、可追溯、可复盘，而不是黑箱输出。\n\n核心设计\n三层 100 分制评分体系：基本面 / 技术面 / 资金面三层打分，各层因子权重显式可调，每一分的扣减都能回溯到具体因子与规则\n21 个二级行业自适应阈值：不同行业的因子分布差异巨大，固定阈值会造成系统性偏差；系统按二级行业自适应调整打分阈值\n两段式选股：\"形态预过滤 + 质量打分\"——先用形态规则过滤掉不合格标的，再对候选池做质量评分，兼顾效率与精度\n\n工程化保障\n214 个自动化测试：pytest 覆盖打分逻辑、阈值调整、数据边界等关键路径，保证规则迭代不引入回归\nWeb 可视化看板：打分结果、因子暴露、筛选漏斗全流程可视化，支撑投资决策委员会的复盘讨论\n\n我的角色\n\n主导开发：评分体系与行业阈值设计、两段式选股逻辑实现、自动化测试体系与可视化看板搭建。",
+      "en": "Background\n\nDuring my quantitative researcher internship at Transwarp Technology, I served on a five-person investment committee (with risk veto) in an AI-native portfolio program, owning factor scoring and portfolio construction. AlphaForge is the multi-factor stock-screening and backtesting system I led for this program. The core problem it solves: making stock-selection conclusions explainable, traceable, and reviewable rather than black-box outputs.\n\nKey Design\nThree-layer 100-point scoring "
+    },
+    "tags": [
+      "Python",
+      "pandas",
+      "NumPy",
+      "pytest",
+      "ECharts"
+    ]
+  },
+  {
+    "slug": "quantbacktest",
+    "title": {
+      "zh": "事件驱动回测引擎",
+      "en": "Event-Driven Backtesting Engine"
+    },
+    "type": "project",
+    "url": {
+      "zh": "/zh/projects/quantbacktest",
+      "en": "/en/projects/quantbacktest"
+    },
+    "content": {
+      "zh": "项目背景\n\n回测的意义在于\"接近真实地\"检验策略——如果回测引擎忽略了交易摩擦，结论就会系统性高估收益。在星环科技实习期间，我实现了完整建模 A 股市场规则的事件驱动回测引擎，作为 AlphaForge 多因子策略的验证底座。\n\n交易摩擦建模\nT+1 交易制度：当日买入次日才能卖出，约束调仓行为\n涨跌停限制：触及涨跌停无法成交，避免\"不可能成交的收益\"\n印花税与滑点：按真实税率与冲击成本计入交易成本\n事件驱动架构：以事件序列驱动撮合逻辑，天然贴近真实交易流程\n\n仓位管理\n凯利公式仓位：基于策略胜率与赔率计算理论最优仓位\n单票仓位约束：限制个股集中度，防范单一标的黑天鹅\n行业风险系数调整：按行业风险水平动态调整该行业持仓上限\n\n验证结果\n\n基于真实 A 股数据完成多因子策略回测，策略相对市场基准实现正向超额收益；回测引擎同步输出风险指标与业绩归因，支撑投资决策委员会的复盘。",
+      "en": "Background\n\nBacktesting is only meaningful when it approximates reality — an engine that ignores market frictions systematically overstates returns. During my Transwarp internship, I built an event-driven backtesting engine that fully models A-share market rules, serving as the validation foundation for AlphaForge's multi-factor strategies.\n\nMarket-Friction Modeling\nT+1 settlement: shares bought today can only be sold tomorrow, constraining rebalancing behavior\nPrice limits: orders at limit-up/l"
+    },
+    "tags": [
+      "Python",
+      "pandas",
+      "事件驱动架构",
+      "回测建模"
+    ]
+  },
+  {
     "slug": "mem-data-assistant",
     "title": {
       "zh": "AI+工程管理：企业管理数据分析助手",
-      "en": "AI + Engineering Management: Data Analytics Assistant for Enterprise Management"
+      "en": "AI + Engineering Management: Data Analytics Assistant"
     },
     "type": "project",
     "url": {
@@ -149,8 +153,7 @@
       "Python",
       "Requests",
       "网络爬虫",
-      "大模型辅助标注",
-      "pandas"
+      "数据清洗"
     ]
   },
   {

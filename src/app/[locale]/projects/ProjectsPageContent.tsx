@@ -38,6 +38,10 @@ const texts = {
     searchPlaceholder: '搜索项目...',
     noResults: '未找到匹配的项目',
     projectsCount: '个项目',
+    coreProjects: '核心项目',
+    coreDesc: 'AI 应用与智能体工程 · 算法建模与工程实现主线',
+    otherExperience: '其他经历',
+    otherDesc: '课程项目、早期科研与课外创作',
   },
   en: {
     filter: 'Filter',
@@ -47,6 +51,10 @@ const texts = {
     searchPlaceholder: 'Search projects...',
     noResults: 'No matching projects found',
     projectsCount: 'projects',
+    coreProjects: 'Core Projects',
+    coreDesc: 'AI applications and agent engineering · algorithm modeling and engineering',
+    otherExperience: 'Other Experience',
+    otherDesc: 'Coursework, early research, and creative work',
   },
 };
 
@@ -84,6 +92,9 @@ export function ProjectsPageContent({ locale, projects }: ProjectsPageContentPro
   }, [projects, searchQuery, selectedCategory, featuredOnly, locale]);
 
   const hasActiveFilters = searchQuery || selectedCategory !== 'all' || featuredOnly;
+
+  const coreProjects = useMemo(() => filteredProjects.filter(p => p.featured), [filteredProjects]);
+  const otherProjects = useMemo(() => filteredProjects.filter(p => !p.featured), [filteredProjects]);
 
   return (
     <div className="min-h-screen">
@@ -179,10 +190,34 @@ export function ProjectsPageContent({ locale, projects }: ProjectsPageContentPro
               </p>
             </div>
           ) : (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {filteredProjects.map(project => (
-                <ProjectCard key={project.slug} project={project} locale={locale} />
-              ))}
+            <div className="space-y-14">
+              {coreProjects.length > 0 && (
+                <div>
+                  <div className="mb-6">
+                    <h2 className="accent-line inline-block text-2xl font-bold">{t.coreProjects}</h2>
+                    <p className="mt-2 text-sm text-muted-foreground">{t.coreDesc}</p>
+                  </div>
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {coreProjects.map(project => (
+                      <ProjectCard key={project.slug} project={project} locale={locale} />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {otherProjects.length > 0 && (
+                <div>
+                  <div className="mb-6">
+                    <h2 className="accent-line inline-block text-2xl font-bold">{t.otherExperience}</h2>
+                    <p className="mt-2 text-sm text-muted-foreground">{t.otherDesc}</p>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {otherProjects.map(project => (
+                      <ProjectCard key={project.slug} project={project} locale={locale} compact />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </Container>

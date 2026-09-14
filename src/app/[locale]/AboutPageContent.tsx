@@ -35,6 +35,12 @@ interface AboutPageContentProps {
       summary: Record<Locale, string>;
       tags?: string[];
     }>;
+    capabilities?: Array<{
+      area: Record<Locale, string>;
+      summary: Record<Locale, string>;
+      tags?: string[];
+      evidence?: Record<Locale, string>;
+    }>;
     awards: Array<{
       title: Record<Locale, string>;
       year: number;
@@ -59,6 +65,7 @@ const texts = {
     cvDownload: '下载简历',
     cvPreview: '预览',
     researchInterests: '研究兴趣',
+    capabilities: '核心能力',
     learningPath: '学习路径',
     education: '教育背景',
     experience: '实习经历',
@@ -71,6 +78,7 @@ const texts = {
     cvDownload: 'Download CV',
     cvPreview: 'Preview',
     researchInterests: 'Research Interests',
+    capabilities: 'Core Capabilities',
     learningPath: 'Learning Path',
     education: 'Education',
     experience: 'Experience',
@@ -178,40 +186,32 @@ export function AboutPageContent({ locale, about, projects }: AboutPageContentPr
         </Section>
       )}
 
-      {/* Learning Path */}
-      {about?.learningPath && about.learningPath.length > 0 && (
+      {/* Core Capabilities */}
+      {about?.capabilities && about.capabilities.length > 0 && (
         <Section variant="muted">
-          <Container size="lg">
-            <SectionHeader title={t.learningPath} />
-            <div className="space-y-4">
-              {about.learningPath.map((stage, i) => (
-                <Card key={i}>
-                  <CardContent className="p-5">
-                    <div className="flex items-start gap-4">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
-                        {i + 1}
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                          <h3 className="font-semibold">{stage.stage[locale]}</h3>
-                          {stage.period && (
-                            <span className="text-sm text-muted-foreground">{stage.period}</span>
-                          )}
-                        </div>
-                        <p className="mt-1.5 text-sm text-muted-foreground">
-                          {stage.summary[locale]}
-                        </p>
-                        {stage.tags && stage.tags.length > 0 && (
-                          <div className="mt-3 flex flex-wrap gap-2">
-                            {stage.tags.map((tag, j) => (
-                              <Tag key={j} variant="outline" size="sm">
-                                {tag}
-                              </Tag>
-                            ))}
-                          </div>
-                        )}
+          <Container size="xl">
+            <SectionHeader title={t.capabilities} />
+            <div className="grid gap-5 md:grid-cols-2">
+              {about.capabilities.map((cap, i) => (
+                <Card key={i} className="h-full">
+                  <CardContent className="flex h-full flex-col p-6">
+                    <h3 className="text-base font-semibold text-primary">{cap.area[locale]}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{cap.summary[locale]}</p>
+                    {cap.tags && cap.tags.length > 0 && (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {cap.tags.map((tag, j) => (
+                          <Tag key={j} variant="outline" size="sm">
+                            {tag}
+                          </Tag>
+                        ))}
                       </div>
-                    </div>
+                    )}
+                    {cap.evidence && (
+                      <p className="mt-auto pt-4 text-xs text-muted-foreground">
+                        {locale === 'zh' ? '支撑：' : 'Evidence: '}
+                        {cap.evidence[locale]}
+                      </p>
+                    )}
                   </CardContent>
                 </Card>
               ))}
@@ -318,6 +318,48 @@ export function AboutPageContent({ locale, about, projects }: AboutPageContentPr
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {projects.map(project => (
                 <ProjectCard key={project.slug} project={project} locale={locale} />
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
+
+      {/* Learning Path */}
+      {about?.learningPath && about.learningPath.length > 0 && (
+        <Section variant="muted">
+          <Container size="lg">
+            <SectionHeader title={t.learningPath} />
+            <div className="space-y-4">
+              {about.learningPath.map((stage, i) => (
+                <Card key={i}>
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                        {i + 1}
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                          <h3 className="font-semibold">{stage.stage[locale]}</h3>
+                          {stage.period && (
+                            <span className="text-sm text-muted-foreground">{stage.period}</span>
+                          )}
+                        </div>
+                        <p className="mt-1.5 text-sm text-muted-foreground">
+                          {stage.summary[locale]}
+                        </p>
+                        {stage.tags && stage.tags.length > 0 && (
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {stage.tags.map((tag, j) => (
+                              <Tag key={j} variant="outline" size="sm">
+                                {tag}
+                              </Tag>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </Container>

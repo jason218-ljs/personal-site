@@ -1,73 +1,5 @@
 [
   {
-    "slug": "alphaforge",
-    "title": {
-      "zh": "AlphaForge · 多因子选股系统",
-      "en": "AlphaForge · Multi-Factor Stock Screening System"
-    },
-    "category": "industry",
-    "shortDescription": {
-      "zh": "面向 A 股的三层 100 分制选股评分体系：基本面 / 技术面 / 资金面打分 + 21 个二级行业自适应阈值，两段式\"形态预过滤 + 质量打分\"选股，配套 214 个自动化测试与 Web 可视化看板。",
-      "en": "A three-layer 100-point stock-scoring framework for A-shares: fundamental / technical / money-flow scoring with adaptive thresholds across 21 sub-industries, a two-stage selection pipeline, 214 automated tests, and a web dashboard."
-    },
-    "techStack": ["Python", "pandas", "NumPy", "pytest", "数据可视化"],
-    "featured": true,
-    "order": 1,
-    "date": "2026-07-15",
-    "tags": ["Quantitative Finance", "Multi-Factor Model", "A-Share"]
-  },
-  {
-    "slug": "quantbacktest",
-    "title": {
-      "zh": "事件驱动回测引擎",
-      "en": "Event-Driven Backtesting Engine"
-    },
-    "category": "industry",
-    "shortDescription": {
-      "zh": "完整建模 A 股 T+1、涨跌停、印花税、滑点等交易摩擦与凯利公式仓位管理（单票仓位约束 + 行业风险系数调整）的回测引擎，基于真实 A 股数据完成多因子策略回测验证。",
-      "en": "A backtesting engine that fully models A-share market frictions (T+1, price limits, stamp duty, slippage) and Kelly-criterion position sizing with per-stock and per-industry risk constraints; validated multi-factor strategies on real A-share data."
-    },
-    "techStack": ["Python", "pandas", "量化建模"],
-    "featured": true,
-    "order": 2,
-    "date": "2026-07-25",
-    "tags": ["Backtesting", "Kelly Criterion", "Risk Management"]
-  },
-  {
-    "slug": "three-flywheels",
-    "title": {
-      "zh": "“工程 / 数据 / 认知”三大飞轮自进化系统",
-      "en": "Three-Flywheel Self-Evolution System"
-    },
-    "category": "industry",
-    "shortDescription": {
-      "zh": "以零侵入旁路架构为量化研究流水线提供健康检查、数据质量检测与方法论复盘的自进化系统；62 个单元测试 + CI + 静态红线扫描保障工程质量，真实运行中自动检出数据缺失等问题。",
-      "en": "A self-evolution system providing zero-intrusion sidecar health checks, data-quality detection, and methodology reviews for the quant research pipeline; 62 unit tests, CI, and static rule checks; automatically detected real data-quality issues in production."
-    },
-    "techStack": ["Python", "pytest", "CI/CD", "AST 分析"],
-    "featured": true,
-    "order": 3,
-    "date": "2026-08-05",
-    "tags": ["Engineering Quality", "Data Quality", "Automation"]
-  },
-  {
-    "slug": "buffett-value-agent",
-    "title": {
-      "zh": "Buffett-Value-Agent · 价值投资智能体",
-      "en": "Buffett-Value-Agent · Value-Investing AI Agent"
-    },
-    "category": "industry",
-    "shortDescription": {
-      "zh": "人机边界协议（HABP）下的价值投资智能体研发，负责人机边界协议下财务计算与风控校验等确定性任务的规则实现。",
-      "en": "R&D on a value-investing AI agent under a Human-AI Boundary Protocol (HABP); implemented rule-based financial computation and risk-validation modules for deterministic tasks."
-    },
-    "techStack": ["Python", "LLM Agent", "规则引擎"],
-    "featured": false,
-    "order": 4,
-    "date": "2026-08-10",
-    "tags": ["AI Agent", "Human-AI Collaboration", "Value Investing"]
-  },
-  {
     "slug": "radio-source-localization",
     "title": {
       "zh": "2026 国赛 B 题 · 无线电干扰源的快速自动定位与清除",
@@ -81,15 +13,83 @@
     "techStack": ["Python", "NumPy", "计算几何", "在线路径规划", "LaTeX"],
     "thumbnail": "/assets/images/projects/radio-source-localization-thumb.jpg",
     "featured": true,
-    "order": 5,
+    "order": 1,
     "date": "2026-09-13",
     "tags": ["Mathematical Modeling", "Computational Geometry", "Path Planning"]
+  },
+  {
+    "slug": "three-flywheels",
+    "title": {
+      "zh": "“工程 / 数据 / 认知”三大飞轮自进化系统",
+      "en": "Three-Flywheel Self-Evolution System"
+    },
+    "category": "industry",
+    "shortDescription": {
+      "zh": "以零侵入旁路架构为流水线提供健康检查、数据质量检测与方法论复盘的自进化系统；7 条零侵入红线 + 62 个单元测试 + CI + AST 静态扫描保障工程质量，真实运行中检出字段 100% 缺失、将 139 条监控异常聚类为 9 类错误模式。",
+      "en": "A self-evolution system providing zero-intrusion sidecar health checks, data-quality detection and methodology review; 7 zero-intrusion red lines, 62 unit tests, CI and AST-based static rule scanning. In production it detected a 100%-missing data field and clustered 139 monitoring anomalies into 9 error patterns."
+    },
+    "techStack": ["Python", "pytest", "GitHub Actions CI", "AST 静态分析", "架构设计"],
+    "featured": true,
+    "order": 2,
+    "date": "2026-08-05",
+    "tags": ["Engineering Quality", "Data Quality", "Automation"]
+  },
+  {
+    "slug": "buffett-value-agent",
+    "title": {
+      "zh": "Buffett-Value-Agent · 价值投资智能体",
+      "en": "Buffett-Value-Agent · Value-Investing AI Agent"
+    },
+    "category": "industry",
+    "shortDescription": {
+      "zh": "人机边界协议（HABP）下的 LLM Agent 研发：以“数据溯源—假设识别—逻辑反向推演”三重质疑机制界定智能体的输出边界，负责财务计算与风控校验等确定性任务的规则实现。",
+      "en": "LLM-agent R&D under a Human-AI Boundary Protocol (HABP): defined agent output boundaries via a triple-challenge mechanism (data provenance → assumption identification → reverse logical deduction), and implemented deterministic financial-computation and risk-validation rules."
+    },
+    "techStack": ["LLM Agent", "提示词工程", "人机边界协议 HABP", "规则引擎", "Python"],
+    "featured": true,
+    "order": 3,
+    "date": "2026-08-10",
+    "tags": ["AI Agent", "Human-AI Collaboration", "Trustworthy AI"]
+  },
+  {
+    "slug": "alphaforge",
+    "title": {
+      "zh": "AlphaForge · 多因子选股与回测系统",
+      "en": "AlphaForge · Multi-Factor Screening & Backtesting System"
+    },
+    "category": "industry",
+    "shortDescription": {
+      "zh": "三层 100 分制评分体系（基本面 / 技术面 / 资金面）+ 21 个二级行业自适应阈值，两段式“形态预过滤 + 质量打分”选股，配套 214 个自动化测试与 Web 可视化看板。",
+      "en": "A three-layer 100-point scoring framework (fundamental / technical / money-flow) with adaptive thresholds across 21 sub-industries, a two-stage selection pipeline, 214 automated tests and a web dashboard."
+    },
+    "techStack": ["Python", "pandas", "NumPy", "pytest", "ECharts"],
+    "featured": true,
+    "order": 4,
+    "date": "2026-07-15",
+    "tags": ["System Design", "Multi-Factor Model", "Data Pipeline"]
+  },
+  {
+    "slug": "quantbacktest",
+    "title": {
+      "zh": "事件驱动回测引擎",
+      "en": "Event-Driven Backtesting Engine"
+    },
+    "category": "industry",
+    "shortDescription": {
+      "zh": "完整建模 A 股 T+1、涨跌停、印花税、滑点等交易摩擦与凯利公式仓位管理（单票仓位约束 + 行业风险系数调整）的回测引擎。",
+      "en": "A backtesting engine that fully models A-share market frictions (T+1, price limits, stamp duty, slippage) and Kelly-criterion position sizing with per-stock and per-industry risk constraints."
+    },
+    "techStack": ["Python", "pandas", "事件驱动架构", "回测建模"],
+    "featured": true,
+    "order": 5,
+    "date": "2026-07-25",
+    "tags": ["Backtesting", "Event-Driven", "Risk Management"]
   },
   {
     "slug": "mem-data-assistant",
     "title": {
       "zh": "AI+工程管理：企业管理数据分析助手",
-      "en": "AI + Engineering Management: Data Analytics Assistant for Enterprise Management"
+      "en": "AI + Engineering Management: Data Analytics Assistant"
     },
     "category": "teaching",
     "shortDescription": {
@@ -110,14 +110,14 @@
     },
     "category": "research",
     "shortDescription": {
-      "zh": "毓琇书院“青年科学家成长营”新生早期科研项目：担任小组爬虫开发主力，基于 Requests 与浏览器自动化分三批采集雪球网数据并完成清洗与质量说明，参与 A 股股吧帖子情绪标注与标注手册提炼。",
-      "en": "Early-research training project at Yuxiu College's \"Young Scientist Growth Camp\": lead crawler developer, collecting Xueqiu data with Requests and browser automation in three batches, plus A-share sentiment annotation and guideline distillation."
+      "zh": "毓琇书院“青年科学家成长营”新生早期科研项目：担任小组爬虫开发主力，基于 Requests 与浏览器自动化分三批采集雪球网数据并完成清洗与质量说明。",
+      "en": "Early-research training project at Yuxiu College's \"Young Scientist Growth Camp\": lead crawler developer, collecting Xueqiu data with Requests and browser automation in three batches."
     },
-    "techStack": ["Python", "Requests", "网络爬虫", "大模型辅助标注", "pandas"],
+    "techStack": ["Python", "Requests", "网络爬虫", "数据清洗"],
     "featured": false,
     "order": 7,
     "date": "2026-06-20",
-    "tags": ["Investor Sentiment", "Web Scraping", "Behavioral Finance"]
+    "tags": ["Early Research", "Web Scraping", "Data Quality"]
   },
   {
     "slug": "wartime-relocation-documentary",
@@ -127,11 +127,10 @@
     },
     "category": "creative",
     "shortDescription": {
-      "zh": "校外 AI 视频创作项目：以南大前身国立中央大学抗战西迁为题材，运用 Seedance 2.0 沿“南京—武汉—宜昌—重庆—成都”路线完成约 330 条 AI 视频的提示词工程、生成与剪辑，负责从史料研究到后期剪辑的全流程。",
-      "en": "AI video project on the wartime relocation of Nanjing University's predecessor (National Central University): prompt engineering, generation, and editing of ~330 AI clips with Seedance 2.0 along the Nanjing–Wuhan–Yichang–Chongqing–Chengdu route."
+      "zh": "校外 AI 视频创作项目：以南大前身国立中央大学抗战西迁为题材，运用 Seedance 2.0 沿“南京—武汉—宜昌—重庆—成都”路线完成约 330 条 AI 视频的提示词工程、生成与剪辑。",
+      "en": "AI video project on the wartime relocation of Nanjing University's predecessor: prompt engineering, generation, and editing of ~330 AI clips with Seedance 2.0 along the Nanjing–Wuhan–Yichang–Chongqing–Chengdu route."
     },
     "techStack": ["Seedance 2.0", "提示词工程", "剪映", "史料考证"],
-    "thumbnail": "/assets/images/projects/documentary-thumb.jpg",
     "featured": false,
     "order": 8,
     "date": "2026-06-24",

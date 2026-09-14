@@ -23,6 +23,8 @@ interface ProjectCardProps {
     paperUrl?: string;
   };
   locale: Locale;
+  /** 次要经历的紧凑变体：不显示缩略图，缩小留白与字号，弱化视觉权重 */
+  compact?: boolean;
 }
 
 const categoryLabels: Record<string, Record<'zh' | 'en', string>> = {
@@ -33,14 +35,14 @@ const categoryLabels: Record<string, Record<'zh' | 'en', string>> = {
   creative: { zh: '创作', en: 'Creative' },
 };
 
-export function ProjectCard({ project, locale }: ProjectCardProps) {
+export function ProjectCard({ project, locale, compact = false }: ProjectCardProps) {
   const categoryLabel = categoryLabels[project.category]?.[locale] || project.category;
 
   return (
     <article>
       <Card className="overflow-hidden transition-all hover:shadow-lg group h-full flex flex-col">
-        {project.thumbnail && (
-          <Link href={`/${locale}/projects/${project.slug}`} className="block aspect-video overflow-hidden">
+        {project.thumbnail && !compact && (
+          <Link href={`/${locale}/projects/${project.slug}`} className="relative block aspect-video overflow-hidden">
             <Image
               src={project.thumbnail}
               alt={project.title[locale]}
@@ -50,39 +52,51 @@ export function ProjectCard({ project, locale }: ProjectCardProps) {
             />
           </Link>
         )}
-        <CardContent className="flex-1 flex flex-col p-6 pb-4">
-          <div className="flex items-center gap-2 mb-3">
+        <CardContent className={compact ? 'flex-1 flex flex-col p-4 pb-3' : 'flex-1 flex flex-col p-6 pb-4'}>
+          <div className={compact ? 'flex items-center gap-2 mb-2' : 'flex items-center gap-2 mb-3'}>
             <Tag variant="outline" size="sm">
               {categoryLabel}
             </Tag>
           </div>
-          
-          <h3 className="font-semibold text-lg leading-snug group-hover:text-primary transition-colors">
+
+          <h3
+            className={
+              compact
+                ? 'font-semibold text-base leading-snug group-hover:text-primary transition-colors'
+                : 'font-semibold text-lg leading-snug group-hover:text-primary transition-colors'
+            }
+          >
             <Link href={`/${locale}/projects/${project.slug}`}>
               {project.title[locale]}
             </Link>
           </h3>
-          
-          <p className="mt-2 text-sm text-muted-foreground line-clamp-3 flex-1">
+
+          <p
+            className={
+              compact
+                ? 'mt-1.5 text-xs text-muted-foreground line-clamp-2 flex-1'
+                : 'mt-2 text-sm text-muted-foreground line-clamp-3 flex-1'
+            }
+          >
             {project.shortDescription[locale]}
           </p>
 
           {project.techStack.length > 0 && (
-            <div className="mt-4 flex flex-wrap gap-1.5">
-              {project.techStack.slice(0, 6).map((tech, i) => (
+            <div className={compact ? 'mt-3 flex flex-wrap gap-1' : 'mt-4 flex flex-wrap gap-1.5'}>
+              {project.techStack.slice(0, compact ? 3 : 6).map((tech, i) => (
                 <Tag key={i} variant="outline" size="sm" className="text-xs">
                   {tech}
                 </Tag>
               ))}
-              {project.techStack.length > 6 && (
+              {project.techStack.length > (compact ? 3 : 6) && (
                 <Tag variant="outline" size="sm" className="text-xs text-muted-foreground">
-                  +{project.techStack.length - 6}
+                  +{project.techStack.length - (compact ? 3 : 6)}
                 </Tag>
               )}
             </div>
           )}
 
-          <div className="mt-4 flex items-center gap-2 pt-4 border-t">
+          <div className={compact ? 'mt-3 flex items-center gap-2 pt-3 border-t' : 'mt-4 flex items-center gap-2 pt-4 border-t'}>
             {project.githubUrl && (
               <Button variant="ghost" size="sm" className="h-8 w-8 p-0" aria-label="GitHub" onClick={() => window.open(project.githubUrl, '_blank')}>
                 <Icon icon={GitBranch} className="h-4 w-4" />

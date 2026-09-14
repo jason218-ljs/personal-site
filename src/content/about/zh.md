@@ -20,6 +20,47 @@ bio:
     In September 2026 I competed as team captain, modeler and programmer in Problem B of the China Undergraduate Mathematical Contest in Modeling — "rapid automatic localization and clearance of radio interference sources". I used a coverage-guarantee theorem to turn the probabilistic target of 100% clearance into an independently provable geometric coverage problem, then designed a guaranteed station layout and fused online path planning. I derived the models and wrote all the solver code for the four sub-problems (7,131 lines); in Problem 4 the strategy averaged 542.9 s/source across 120 randomized runs, only 13% above the theoretical lower bound. Earlier I joined Yuxiu College's early-research training programme as lead crawler developer on a social-media investor-sentiment study, and worked on an AI-generated documentary about the wartime relocation of National Central University (Nanjing University's predecessor) — roughly 330 Seedance 2.0 clips from prompt engineering to final edit.
 
     I believe every conclusion must be traceable — every rule has a rationale, and every result can be reproduced. I hope to keep building in AI applications and LLM agent engineering. Feel free to reach out by email.
+capabilities:
+  - area:
+      zh: "数学建模与算法设计"
+      en: "Mathematical Modeling & Algorithm Design"
+    summary:
+      zh: "从问题抽象、模型推导到完整代码落地，并用可证明的结论替代“跑出来看着不错”。"
+      en: "From problem abstraction and model derivation to production code — replacing “it looks fine when it runs” with provable guarantees."
+    tags: ["覆盖保证定理的提出与证明", "计算几何与交会定位", "TSP 融合式在线路径规划", "蒙特卡洛 + 构造性强反例验证", "LaTeX"]
+    evidence:
+      zh: "2026 全国大学生数学建模竞赛 B 题 · 队长 / 建模手 / 编程手（7,131 行求解代码）"
+      en: "2026 CUMCM Problem B · team captain / modeler / programmer (7,131 lines of solver code)"
+  - area:
+      zh: "大模型 Agent 工程"
+      en: "LLM Agent Engineering"
+    summary:
+      zh: "不止“调用模型”，而是设计模型在真实系统里的边界、约束与人工终审点。"
+      en: "Not just calling a model — designing its boundaries, constraints and human sign-off points inside a real system."
+    tags: ["LLM Agent 应用与编排", "人机边界协议（HABP）", "提示词工程", "三重质疑机制", "智能体不确定性约束"]
+    evidence:
+      zh: "星环科技 AI-Native 项目（HABP 与 Buffett-Value-Agent）· 发明专利第三发明人"
+      en: "Transwarp AI-Native program (HABP and Buffett-Value-Agent) · 3rd inventor on a pending patent"
+  - area:
+      zh: "工程规范与可维护性"
+      en: "Engineering Rigor & Maintainability"
+    summary:
+      zh: "把“能跑”做成“可信”：测试、CI、架构约束三件套，让系统长期不腐化。"
+      en: "Turning “it runs” into “it is trustworthy”: tests, CI and architectural guardrails that keep a system from rotting."
+    tags: ["pytest（214 + 62 个单元测试）", "GitHub Actions CI", "零侵入旁路架构", "AST 静态红线扫描", "配置驱动 + 强类型"]
+    evidence:
+      zh: "三大飞轮自进化系统 · AlphaForge 多因子系统"
+      en: "Three-Flywheel self-evolution system · AlphaForge"
+  - area:
+      zh: "数据链路与工程工具"
+      en: "Data Pipelines & Tooling"
+    summary:
+      zh: "从数据采集、清洗、质量核验到可视化交付的完整链路，并具备 Web 交付能力。"
+      en: "The full path from data collection and cleaning through quality checks to visual delivery, plus web delivery skills."
+    tags: ["Python（pandas / NumPy / matplotlib）", "网络爬虫与反爬应对", "ECharts 数据可视化", "Git 协作", "TypeScript / Next.js", "SQL · Linux · Docker（了解）"]
+    evidence:
+      zh: "AlphaForge 可视化看板 · 投资者情绪爬虫 · 个人中英双语网站"
+      en: "AlphaForge dashboard · investor-sentiment crawler · personal bilingual website"
 learningPath:
   - stage:
       zh: "数学与算法基础"
