@@ -88,19 +88,19 @@
   {
     "slug": "mem-data-assistant",
     "title": {
-      "zh": "AI+工程管理：企业管理数据分析助手",
-      "en": "AI + Engineering Management: Data Analytics Assistant"
+      "zh": "工程商机罗盘 · 工程企业市场机会智能分析助手",
+      "en": "Engineering Opportunity Compass · Market-Opportunity Intelligence for Engineering Firms"
     },
     "category": "teaching",
     "shortDescription": {
-      "zh": "7 人团队 MEM 课程项目（进行中），选题方向为社保个税匹配合规分析；负责技术方案设计与数据处理、规则引擎模块开发。",
-      "en": "Ongoing 7-member MEM course project on social-insurance and individual-income-tax compliance analytics; responsible for technical design and the data-processing / rule-engine modules."
+      "zh": "7 人团队 MEM 课程 PBL 项目（进行中）：把工程师从“人肉盯网站筛公告”中解放出来——公开渠道采集 → RAG 知识库问答 → LLM 机会抽取 → 可解释的 A/B/C 评分 → 看板与周报 Agent。我担任 AI 开发组组长。",
+      "en": "Ongoing 7-member MEM course PBL project: from manual tender-announcement screening to an automated pipeline — public-source collection → RAG knowledge base → LLM opportunity extraction → explainable A/B/C scoring → dashboard and weekly-report agent. I led the AI development group."
     },
-    "techStack": ["Python", "数据处理", "规则引擎"],
+    "techStack": ["Python", "RAG", "Milvus Lite", "百炼 Embedding / Rerank", "Streamlit"],
     "featured": false,
     "order": 6,
     "date": "2026-09-01",
-    "tags": ["Course Project", "Compliance Analytics", "Team Project"]
+    "tags": ["Course Project", "RAG", "LLM Application", "Team Project"]
   },
   {
     "slug": "investor-sentiment",
