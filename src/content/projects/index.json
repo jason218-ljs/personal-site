@@ -68,21 +68,22 @@
     "tags": ["AI Agent", "Human-AI Collaboration", "Value Investing"]
   },
   {
-    "slug": "heliostat-simulation",
+    "slug": "radio-source-localization",
     "title": {
-      "zh": "定日镜场光学效率建模仿真",
-      "en": "Heliostat-Field Optical Efficiency Simulation"
+      "zh": "2026 国赛 B 题 · 无线电干扰源的快速自动定位与清除",
+      "en": "2026 CUMCM Problem B · Rapid Localization and Clearance of Radio Interference Sources"
     },
     "category": "research",
     "shortDescription": {
-      "zh": "全国大学生数学建模竞赛（国赛备赛中）项目：实现余弦、阴影遮挡、大气透射、截断四项效率模型，采用 KD 树空间邻近搜索与 NumPy 向量化优化全场仿真性能。",
-      "en": "CUMCM preparation project: implemented cosine, shadowing, atmospheric-transmission, and truncation efficiency models for a heliostat field, with KD-tree neighbor search and NumPy vectorization for full-field simulation performance."
+      "zh": "2026 全国大学生数学建模竞赛 B 题：以“覆盖保证定理”把 100% 清除转化为可证明的几何覆盖，用鲁棒布点与融合式在线路径规划逼近理论下界。200+600 局与 120 局演练均 100% 清除，问题四平均 542.9 s/源、仅高于理论下界 13%。",
+      "en": "2026 CUMCM Problem B: a coverage-guarantee theorem reduces 100% clearance to provable geometric coverage, combined with robust station layout and fused online path planning. 200 + 600 runs and 120 runs all achieved 100% clearance; Problem 4 averaged 542.9 s/source, only 13% above the theoretical lower bound."
     },
-    "techStack": ["Python", "NumPy", "SciPy", "Matplotlib"],
+    "techStack": ["Python", "NumPy", "计算几何", "在线路径规划", "LaTeX"],
+    "thumbnail": "/assets/images/projects/radio-source-localization-thumb.jpg",
     "featured": true,
     "order": 5,
-    "date": "2026-08-20",
-    "tags": ["Mathematical Modeling", "Simulation", "Optimization"]
+    "date": "2026-09-13",
+    "tags": ["Mathematical Modeling", "Computational Geometry", "Path Planning"]
   },
   {
     "slug": "mem-data-assistant",

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: '李俊森 | 个人主页',
     template: '%s | 李俊森',
   },
-  description: '南京大学计算机金融实验班在读（GPA 4.28/5.0），聚焦量化研究与金融科技：多因子选股、回测系统、AI Agent 与数据分析项目。',
+  description: '南京大学计算机科学与技术（计算机金融实验班）在读（GPA 4.28/5.0），聚焦 AI 应用与大模型 Agent 工程：LLM Agent 应用、AI 可信与不确定性约束、计算几何与在线路径规划、数据分析与工程实现。',
   authors: [{ name: '李俊森' }],
   creator: '李俊森',
   publisher: '李俊森',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     alternateLocale: 'en_US',
     siteName: '李俊森 | 个人主页',
     title: '李俊森 | 个人主页',
-    description: '南京大学计算机金融实验班在读（GPA 4.28/5.0），聚焦量化研究与金融科技：多因子选股、回测系统、AI Agent 与数据分析项目。',
+    description: '南京大学计算机科学与技术（计算机金融实验班）在读（GPA 4.28/5.0），聚焦 AI 应用与大模型 Agent 工程：LLM Agent 应用、AI 可信与不确定性约束、计算几何与在线路径规划、数据分析与工程实现。',
     images: [
       {
         url: '/assets/images/og-image.jpg',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '李俊森 | 个人主页',
-    description: '南京大学计算机金融实验班在读（GPA 4.28/5.0），聚焦量化研究与金融科技。',
+    description: '南京大学计算机科学与技术（计算机金融实验班）在读（GPA 4.28/5.0），聚焦 AI 应用与大模型 Agent 工程。',
     images: ['/assets/images/og-image.jpg'],
   },
 };

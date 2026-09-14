@@ -29,6 +29,12 @@ interface AboutPageContentProps {
       period: string;
       description?: Record<Locale, string>;
     }>;
+    learningPath?: Array<{
+      stage: Record<Locale, string>;
+      period?: string;
+      summary: Record<Locale, string>;
+      tags?: string[];
+    }>;
     awards: Array<{
       title: Record<Locale, string>;
       year: number;
@@ -53,6 +59,7 @@ const texts = {
     cvDownload: '下载简历',
     cvPreview: '预览',
     researchInterests: '研究兴趣',
+    learningPath: '学习路径',
     education: '教育背景',
     experience: '实习经历',
     awards: '荣誉与科研',
@@ -64,6 +71,7 @@ const texts = {
     cvDownload: 'Download CV',
     cvPreview: 'Preview',
     researchInterests: 'Research Interests',
+    learningPath: 'Learning Path',
     education: 'Education',
     experience: 'Experience',
     awards: 'Honors & Research',
@@ -164,6 +172,48 @@ export function AboutPageContent({ locale, about, projects }: AboutPageContentPr
             <div className="prose prose-lg max-w-none dark:prose-invert">
               {about.bio[locale].split('\n\n').map((para, i) => (
                 <p key={i}>{para}</p>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
+
+      {/* Learning Path */}
+      {about?.learningPath && about.learningPath.length > 0 && (
+        <Section variant="muted">
+          <Container size="lg">
+            <SectionHeader title={t.learningPath} />
+            <div className="space-y-4">
+              {about.learningPath.map((stage, i) => (
+                <Card key={i}>
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                        {i + 1}
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                          <h3 className="font-semibold">{stage.stage[locale]}</h3>
+                          {stage.period && (
+                            <span className="text-sm text-muted-foreground">{stage.period}</span>
+                          )}
+                        </div>
+                        <p className="mt-1.5 text-sm text-muted-foreground">
+                          {stage.summary[locale]}
+                        </p>
+                        {stage.tags && stage.tags.length > 0 && (
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {stage.tags.map((tag, j) => (
+                              <Tag key={j} variant="outline" size="sm">
+                                {tag}
+                              </Tag>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </Container>

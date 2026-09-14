@@ -87,25 +87,26 @@
     ]
   },
   {
-    "slug": "heliostat-simulation",
+    "slug": "radio-source-localization",
     "title": {
-      "zh": "定日镜场光学效率建模仿真",
-      "en": "Heliostat-Field Optical Efficiency Simulation"
+      "zh": "2026 国赛 B 题 · 无线电干扰源的快速自动定位与清除",
+      "en": "2026 CUMCM Problem B · Rapid Localization and Clearance of Radio Interference Sources"
     },
     "type": "project",
     "url": {
-      "zh": "/zh/projects/heliostat-simulation",
-      "en": "/en/projects/heliostat-simulation"
+      "zh": "/zh/projects/radio-source-localization",
+      "en": "/en/projects/radio-source-localization"
     },
     "content": {
-      "zh": "项目背景\n\n全国大学生数学建模竞赛（国赛备赛中）的训练项目，担任编程手。题目为定日镜场的光学效率建模：塔式太阳能热发电站中，数千面定日镜将阳光反射聚集至吸热塔顶的集热器，需要计算镜场在不同时刻的整体光学效率。\n\n四项效率模型\n余弦效率：入射光线与镜面法线夹角引起的投影损失\n阴影遮挡效率：镜面被前方定日镜或塔影遮挡、以及反射光被邻近镜面拦截的损失\n大气透射效率：光程穿过大气时的衰减\n截断效率：反射光锥落在集热器接收范围内的比例\n\n性能优化\n\n全场仿真的朴素实现需要在每个时段对镜对做两两遮挡判断，计算量随镜面数量平方增长。通过两项优化大幅压缩了全场仿真耗时：\nKD 树空间邻近搜索：只为空间上可能相互遮挡的镜对计算遮挡，跳过绝大多数无交互的镜对\nNumPy 向量化：将逐镜循环改写为矩阵运算，充分利用底层并行\n\n我的角色\n\n编程手：全部建模代码实现、性能优化与仿真结果可视化。",
-      "en": "Background\n\nA training project for the China Undergraduate Mathematical Contest in Modeling (CUMCM, in preparation), where I serve as the programmer. The problem: modeling the optical efficiency of a heliostat field — in a solar tower power plant, thousands of heliostats reflect sunlight onto a receiver at the top of the tower, and the field's overall optical efficiency must be computed across time slots.\n\nFour Efficiency Models\nCosine efficiency: projection loss from the angle between incident "
+      "zh": "项目背景\n\n2026 年全国大学生数学建模竞赛 B 题，题目为无线电干扰源的快速自动定位与清除。场景设定为：给定区域内存在若干无线电干扰源（全向源，以及方向未知的定向源），需要通过若干检测点完成测向——每次测向给出目标所在方向、半角为 1° 的扇形——在有限的检测次数与移动步数内定位并清除全部干扰源，同时让总用时尽可能短。\n\n我在队内担任队长，并同时承担建模手与编程手：四个问题的模型推导、算法设计与全部求解代码由我完成，论文的全部图表与附录代码整理也由我负责。\n\n四个问题\n问题一 · 几何定位：由多个检测点坐标及其示向度计算交会定位区域并判断覆盖关系。把每次测向转化为半角 1° 的半平面约束，联立圆域边界得到含圆弧的凸定位区域，再以三类候选完备地求出真实直径。代表算例定位区域直径 53.23 m，最小包围圆半径 27.11 m 大于直径半径 26.62 m——即\"以直径为直径的圆\"不能覆盖定位区域，且该现象在两万次随机交会实验中占比达 8.08%，具有统计普遍性。\n问题二 · 检测点选址：在单点示向度已知时给出第二检测点策略。由首测扇形与未知接收半径解析构造\"四圆盘保证接收域 + 正常",
+      "en": "Background\n\nProblem B of the 2026 China Undergraduate Mathematical Contest in Modeling (CUMCM): rapid automatic localization and clearance of radio interference sources. Given an area containing several interference sources — omnidirectional ones, plus directional sources whose orientation is unknown — a team must take bearings from detection points (each bearing yields a 1°-half-angle sector), then localize and clear every source within a limited number of detections and movement steps, in as l"
     },
     "tags": [
       "Python",
       "NumPy",
-      "SciPy",
-      "Matplotlib"
+      "计算几何",
+      "在线路径规划",
+      "LaTeX"
     ]
   },
   {
@@ -186,8 +187,8 @@
       "en": "/en/about"
     },
     "content": {
-      "zh": "南京大学计算机金融实验班在读本科生，聚焦量化研究与金融科技：多因子选股、事件驱动回测、AI Agent 与数据分析。曾于星环科技（Transwarp）人工智能产品部担任量化研究员实习，参与 AI-Native 组合投资项目，主导开发多因子选股回测系统 AlphaForge 与三大飞轮自进化系统。毓琇书院\"青年科学家成长营\"早期科研训练（社交媒体投资者情绪研究 · 爬虫开发主力），南大西迁 AI 纪录片制作（Seedance 2.0 · 约 330 条视频）。全国大学生数学建模竞赛备赛中（编程手），MEM 课程项目\"企业管理数据分析助手\"核心开发。",
-      "en": "Undergraduate in the CS-Finance Experimental Class at Nanjing University, focusing on quantitative research and fintech: multi-factor stock screening, event-driven backtesting, AI agents, and data analytics. Former quantitative researcher intern at Transwarp Technology's AI Product Department, working on an AI-native portfolio program; led development of AlphaForge and a three-flywheel self-evolution system. Early-research trainee at Yuxiu College's \"Young Scientist Growth Camp\" (social-media investor sentiment study, lead crawler developer), and AI video producer for a documentary on NJU's wartime relocation (~330 Seedance 2.0 clips). Programmer for the China Undergraduate Mathematical Contest in Modeling (CUMCM, in preparation) and core developer of the MEM course project \"Data Analytics Assistant for Enterprise Management\"."
+      "zh": "南京大学计算机科学与技术（计算机金融实验班）在读本科生，聚焦 AI 应用与大模型 Agent 工程：LLM Agent 应用、AI 可信与不确定性约束、计算几何与在线路径规划、数据分析。曾在星环科技（Transwarp）AI-Native 组合投资实训营担任量化研究员实习，主导 AlphaForge 多因子选股回测系统、事件驱动回测引擎与三大飞轮自进化系统，并参与 HABP 人机边界协议下 LLM Agent 输出约束机制设计。2026 年全国大学生数学建模竞赛 B 题队长兼建模手、编程手，以覆盖保证定理与融合式在线路径规划实现问题四平均 542.9 s/源、逼近理论下界。毓琇书院\"青年科学家成长营\"早期科研训练（社交媒体投资者情绪研究 · 爬虫开发主力），南大西迁 AI 纪录片制作（Seedance 2.0 · 约 330 条视频）。",
+      "en": "Undergraduate in the Computer Science & Technology (CS-Finance Experimental Class) programme at Nanjing University, focusing on AI applications and LLM agent engineering: LLM-agent applications, AI trustworthiness and uncertainty constraints, computational geometry and online path planning, and data analytics. Former quantitative researcher intern in Transwarp Technology's AI-Native Portfolio Program, where I led AlphaForge (a multi-factor screening and backtesting system), an event-driven backtesting engine, and a three-flywheel self-evolution system, and contributed to LLM-agent output constraints under the Human-AI Boundary Protocol (HABP). Team captain, modeler and programmer for Problem B of the 2026 China Undergraduate Mathematical Contest in Modeling, where a coverage-guarantee theorem and fused online path planning brought Problem 4 to 542.9 s/source on average, approaching the theoretical lower bound. Early-research trainee at Yuxiu College's \"Young Scientist Growth Camp\" (soc"
     },
     "tags": []
   },

@@ -135,7 +135,7 @@ function validateProjectMeta() {
         if (!proj.shortDescription.en) addError(prefix, 'Missing English shortDescription');
       }
 
-      const validCategories = ['research', 'teaching', 'open-source', 'industry'];
+      const validCategories = ['research', 'teaching', 'open-source', 'industry', 'creative'];
       if (proj.category && !validCategories.includes(proj.category)) {
         addError(prefix, `Invalid category: ${proj.category}. Must be one of: ${validCategories.join(', ')}`);
       }
