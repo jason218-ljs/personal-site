@@ -6,7 +6,7 @@ title:
 category: "research"
 shortDescription:
   zh: "2026 全国大学生数学建模竞赛 B 题：以“覆盖保证定理”把 100% 清除转化为可证明的几何覆盖，用鲁棒布点与融合式在线路径规划逼近理论下界。200+600 局与 120 局演练均 100% 清除，问题四平均 542.9 s/源、仅高于理论下界 13%。"
-  en: "2026 CUMCM Problem B: a coverage-guarantee theorem reduces 100% clearance to provable geometric coverage, combined with robust station layout and fused online path planning. 200 + 600 runs and 120 runs all achieved 100% clearance; Problem 4 averaged 542.9 s/source, only 13% above the theoretical lower bound."
+  en: "2026 CUMCM Problem B (**First Prize, Jiangsu Division**): a coverage-guarantee theorem reduces 100% clearance to provable geometric coverage, combined with robust station layout and fused online path planning. 200 + 600 runs and 120 runs all achieved 100% clearance; Problem 4 averaged 542.9 s/source, only 13% above the theoretical lower bound."
 techStack: ["Python", "NumPy", "Computational Geometry", "Online Path Planning", "LaTeX"]
 thumbnail: "/assets/images/projects/radio-source-localization-thumb.jpg"
 featured: true
@@ -19,7 +19,7 @@ tags: ["Mathematical Modeling", "Computational Geometry", "Path Planning"]
 
 Problem B of the 2026 China Undergraduate Mathematical Contest in Modeling (CUMCM): **rapid automatic localization and clearance of radio interference sources**. Given an area containing several interference sources — omnidirectional ones, plus directional sources whose orientation is unknown — a team must take bearings from detection points (each bearing yields a 1°-half-angle sector), then localize and clear every source within a limited number of detections and movement steps, in as little time as possible.
 
-I served as **team captain** while also acting as **modeler** and **programmer**: I derived the models for all four sub-problems, designed the algorithms, wrote all solver code, and produced **every figure plus the appendix code organization** for the paper.
+I served as **team captain and programmer** (**First Prize, Jiangsu Division**): I coordinated the three-person team and owned all solver code, simulation experiments and algorithm implementation across the four sub-problems (the coverage-guarantee theorem was derived jointly by the team), and produced **every figure plus the appendix code organization** for the paper.
 
 ## The Four Sub-Problems
 
@@ -60,4 +60,4 @@ The lower bound is estimated as: outer-ring encirclement 2π×1830/5 ≈ 2299 s,
 
 ## My Role
 
-Team captain / modeler / programmer — all model derivations and algorithm implementations for the four sub-problems, all solver code, and every figure plus the appendix code organization for the paper. AI tooling (DeepSeek) was used to assist derivation checks and code generation; every output was adopted only after data-provenance review and result reproduction.
+Team captain / programmer (**First Prize, Jiangsu Division**) — all solver code, simulation experiments and algorithm implementations for the four sub-problems, and every figure plus the appendix code organization for the paper. AI tooling (DeepSeek) was used to assist derivation checks and code generation; every output was adopted only after data-provenance review and result reproduction.

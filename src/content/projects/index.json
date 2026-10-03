@@ -7,8 +7,8 @@
     },
     "category": "research",
     "shortDescription": {
-      "zh": "2026 全国大学生数学建模竞赛 B 题：以“覆盖保证定理”把 100% 清除转化为可证明的几何覆盖，用鲁棒布点与融合式在线路径规划逼近理论下界。200+600 局与 120 局演练均 100% 清除，问题四平均 542.9 s/源、仅高于理论下界 13%。",
-      "en": "2026 CUMCM Problem B: a coverage-guarantee theorem reduces 100% clearance to provable geometric coverage, combined with robust station layout and fused online path planning. 200 + 600 runs and 120 runs all achieved 100% clearance; Problem 4 averaged 542.9 s/source, only 13% above the theoretical lower bound."
+      "zh": "2026 全国大学生数学建模竞赛 B 题（江苏赛区一等奖）：以“覆盖保证定理”把 100% 清除转化为可证明的几何覆盖，用鲁棒布点与融合式在线路径规划逼近理论下界。200+600 局与 120 局演练均 100% 清除，问题四平均 542.9 s/源、仅高于理论下界 13%。",
+      "en": "2026 CUMCM Problem B (First Prize, Jiangsu Division): a coverage-guarantee theorem reduces 100% clearance to provable geometric coverage, combined with robust station layout and fused online path planning. 200 + 600 runs and 120 runs all achieved 100% clearance; Problem 4 averaged 542.9 s/source, only 13% above the theoretical lower bound."
     },
     "techStack": ["Python", "NumPy", "计算几何", "在线路径规划", "LaTeX"],
     "thumbnail": "/assets/images/projects/radio-source-localization-thumb.jpg",

@@ -5,7 +5,7 @@ title:
   en: "2026 CUMCM Problem B · Rapid Localization and Clearance of Radio Interference Sources"
 category: "research"
 shortDescription:
-  zh: "2026 全国大学生数学建模竞赛 B 题：以“覆盖保证定理”把 100% 清除转化为可证明的几何覆盖，用鲁棒布点与融合式在线路径规划逼近理论下界。200+600 局与 120 局演练均 100% 清除，问题四平均 542.9 s/源、仅高于理论下界 13%。"
+  zh: "2026 全国大学生数学建模竞赛 B 题（**江苏赛区一等奖**）：以“覆盖保证定理”把 100% 清除转化为可证明的几何覆盖，用鲁棒布点与融合式在线路径规划逼近理论下界。200+600 局与 120 局演练均 100% 清除，问题四平均 542.9 s/源、仅高于理论下界 13%。"
   en: "2026 CUMCM Problem B: a coverage-guarantee theorem reduces 100% clearance to provable geometric coverage, combined with robust station layout and fused online path planning. 200 + 600 runs and 120 runs all achieved 100% clearance; Problem 4 averaged 542.9 s/source, only 13% above the theoretical lower bound."
 techStack: ["Python", "NumPy", "计算几何", "在线路径规划", "LaTeX"]
 thumbnail: "/assets/images/projects/radio-source-localization-thumb.jpg"
@@ -19,7 +19,7 @@ tags: ["Mathematical Modeling", "Computational Geometry", "Path Planning"]
 
 2026 年全国大学生数学建模竞赛 B 题，题目为**无线电干扰源的快速自动定位与清除**。场景设定为：给定区域内存在若干无线电干扰源（全向源，以及方向未知的定向源），需要通过若干检测点完成测向——每次测向给出目标所在方向、半角为 1° 的扇形——在有限的检测次数与移动步数内定位并清除全部干扰源，同时让总用时尽可能短。
 
-我在队内担任**队长**，并同时承担**建模手**与**编程手**：四个问题的模型推导、算法设计与全部求解代码由我完成，论文的**全部图表与附录代码整理**也由我负责。
+我在队内担任**队长兼编程手**（**江苏赛区一等奖**）：统筹三人分工，负责四个问题的全部求解代码、仿真实验与算法实现（覆盖保证定理由团队协作推导），论文的**全部图表与附录代码整理**也由我负责。
 
 ## 四个问题
 
@@ -60,4 +60,4 @@ tags: ["Mathematical Modeling", "Computational Geometry", "Path Planning"]
 
 ## 我的角色
 
-队长 / 建模手 / 编程手——四问全部模型推导与算法实现、全部求解代码、论文全部图表与附录代码整理。AI 工具（DeepSeek）用于辅助推导验证与代码生成，所有输出均经数据溯源与结果复现核验后采纳。
+队长 / 编程手（江苏赛区一等奖）——统筹分工，负责四问全部求解代码与仿真实验（覆盖保证定理由团队协作推导）、论文全部图表与附录代码整理。AI 工具（DeepSeek）用于辅助推导验证与代码生成，所有输出均经数据溯源与结果复现核验后采纳。

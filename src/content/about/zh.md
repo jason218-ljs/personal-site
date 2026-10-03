@@ -7,7 +7,7 @@ bio:
 
     2026 年暑期，我在星环科技（Transwarp）的 AI-Native 组合投资实训营（校企合作实习项目）担任量化研究员，在 5 人投资决策委员会中持风险一票否决权：主导开发多因子选股回测系统 AlphaForge 与事件驱动回测引擎，主导设计"工程 / 数据 / 认知"三大飞轮自进化系统，并参与人机边界协议（HABP）下 LLM Agent 输出边界的设计——以"数据溯源—假设识别—逻辑反向推演"三重质疑机制约束智能体行为。同时作为第三发明人参与一项面向大语言模型智能体可信控制的国家发明专利申请（申请中）。
 
-    2026 年 9 月，我作为队长兼建模手、编程手参加全国大学生数学建模竞赛 B 题"无线电干扰源的快速自动定位与清除"：以覆盖保证定理把"100% 清除"这一概率目标转化为可独立证明的几何覆盖问题，并设计保证型测站构型与融合式在线路径规划。四问全部模型推导与求解代码（共 7,131 行）由我完成，问题四在 120 局随机工况下平均 542.9 s/源，仅高出理论下界 13%。此前我参加毓琇书院"青年科学家成长营"早期科研训练，担任社交媒体投资者情绪研究的小组爬虫开发主力；课外参与以南大前身国立中央大学抗战西迁为题材的 AI 纪录片制作，运用 Seedance 2.0 完成约 330 条 AI 视频的提示词工程、生成与剪辑。
+    2026 年 9 月，我作为队长兼编程手参加全国大学生数学建模竞赛 B 题"无线电干扰源的快速自动定位与清除"，获江苏赛区一等奖：团队以覆盖保证定理把"100% 清除"这一概率目标转化为可独立证明的几何覆盖问题，我负责保证型测站构型与融合式在线路径规划的实现，以及四问全部求解代码（共 7,131 行）。问题四在 120 局随机工况下平均 542.9 s/源，仅高出理论下界 13%。此前我参加毓琇书院"青年科学家成长营"早期科研训练，担任社交媒体投资者情绪研究的小组爬虫开发主力；课外参与以南大前身国立中央大学抗战西迁为题材的 AI 纪录片制作，运用 Seedance 2.0 完成约 330 条 AI 视频的提示词工程、生成与剪辑。
 
     我坚持"结论必须可追溯"——每条规则有依据、每个结果可复现。期望在 AI 应用与大模型 Agent 工程方向长期发展，欢迎通过邮件与我交流。
   en: |
@@ -17,7 +17,7 @@ bio:
 
     In summer 2026 I worked as a quantitative researcher in Transwarp Technology's AI-Native Portfolio Program (a university–industry internship), holding a risk veto on a five-person investment committee. There I led development of AlphaForge (a multi-factor stock-screening and backtesting system) and an event-driven backtesting engine, led the design of a three-flywheel self-evolution system, and contributed to a Human-AI Boundary Protocol (HABP) that constrains LLM-agent output through a triple-challenge mechanism — data provenance, assumption identification, and reverse logical deduction. I am also a third inventor on a pending national patent covering trustworthy uncertainty constraints for LLM-based agents.
 
-    In September 2026 I competed as team captain, modeler and programmer in Problem B of the China Undergraduate Mathematical Contest in Modeling — "rapid automatic localization and clearance of radio interference sources". I used a coverage-guarantee theorem to turn the probabilistic target of 100% clearance into an independently provable geometric coverage problem, then designed a guaranteed station layout and fused online path planning. I derived the models and wrote all the solver code for the four sub-problems (7,131 lines); in Problem 4 the strategy averaged 542.9 s/source across 120 randomized runs, only 13% above the theoretical lower bound. Earlier I joined Yuxiu College's early-research training programme as lead crawler developer on a social-media investor-sentiment study, and worked on an AI-generated documentary about the wartime relocation of National Central University (Nanjing University's predecessor) — roughly 330 Seedance 2.0 clips from prompt engineering to final edit.
+    In September 2026 I competed as team captain and programmer in Problem B of the China Undergraduate Mathematical Contest in Modeling — "rapid automatic localization and clearance of radio interference sources". winning a First Prize in the Jiangsu Division. The team used a coverage-guarantee theorem to turn the probabilistic target of 100% clearance into an independently provable geometric coverage problem; I implemented the guaranteed station layout and fused online path planning, and wrote all the solver code for the four sub-problems (7,131 lines); in Problem 4 the strategy averaged 542.9 s/source across 120 randomized runs, only 13% above the theoretical lower bound. Earlier I joined Yuxiu College's early-research training programme as lead crawler developer on a social-media investor-sentiment study, and worked on an AI-generated documentary about the wartime relocation of National Central University (Nanjing University's predecessor) — roughly 330 Seedance 2.0 clips from prompt engineering to final edit.
 
     I believe every conclusion must be traceable — every rule has a rationale, and every result can be reproduced. I hope to keep building in AI applications and LLM agent engineering. Feel free to reach out by email.
 capabilities:
@@ -27,10 +27,10 @@ capabilities:
     summary:
       zh: "从问题抽象、模型推导到完整代码落地，并用可证明的结论替代“跑出来看着不错”。"
       en: "From problem abstraction and model derivation to production code — replacing “it looks fine when it runs” with provable guarantees."
-    tags: ["覆盖保证定理的提出与证明", "计算几何与交会定位", "TSP 融合式在线路径规划", "蒙特卡洛 + 构造性强反例验证", "LaTeX"]
+    tags: ["覆盖保证定理的验证（构造性强反例 + 蒙特卡洛）", "计算几何与交会定位", "TSP 融合式在线路径规划", "蒙特卡洛 + 构造性强反例验证", "LaTeX"]
     evidence:
-      zh: "2026 全国大学生数学建模竞赛 B 题 · 队长 / 建模手 / 编程手（7,131 行求解代码）"
-      en: "2026 CUMCM Problem B · team captain / modeler / programmer (7,131 lines of solver code)"
+      zh: "2026 全国大学生数学建模竞赛 B 题 · 队长 / 编程手 · 江苏赛区一等奖（7,131 行求解代码）"
+      en: "2026 CUMCM Problem B · team captain / programmer · First Prize, Jiangsu Division (7,131 lines of solver code)"
   - area:
       zh: "大模型 Agent 工程"
       en: "LLM Agent Engineering"
@@ -146,8 +146,8 @@ experience:
       en: "Prompt engineering, generation, and editing of ~330 Seedance 2.0 AI clips on the wartime relocation of National Central University"
 awards:
   - title:
-      zh: "2026 全国大学生数学建模竞赛（CUMCM）· 队长 / 建模手 / 编程手"
-      en: "2026 CUMCM Problem B · Team Captain / Modeler / Programmer"
+      zh: "2026 全国大学生数学建模竞赛（CUMCM）· 江苏赛区一等奖 · 队长 / 编程手"
+      en: "2026 CUMCM Problem B · First Prize, Jiangsu Division · Team Captain / Programmer"
     year: 2026
     description:
       zh: "B 题“无线电干扰源的快速自动定位与清除”：覆盖保证定理 + 保证型测站构型 + 融合式在线路径规划；四问全部建模与代码 7,131 行，问题四平均 542.9 s/源、仅高于理论下界 13%（赛果待公布）"
@@ -168,4 +168,4 @@ awards:
       en: "Computer Science & Technology (CS-Finance Experimental Class), Nanjing University"
 ---
 
-南京大学计算机科学与技术（计算机金融实验班）在读本科生，聚焦 AI 应用与大模型 Agent 工程：LLM Agent 应用、AI 可信与不确定性约束、计算几何与在线路径规划、数据分析。曾在星环科技（Transwarp）AI-Native 组合投资实训营担任量化研究员实习，主导 AlphaForge 多因子选股回测系统、事件驱动回测引擎与三大飞轮自进化系统，并参与 HABP 人机边界协议下 LLM Agent 输出约束机制设计。2026 年全国大学生数学建模竞赛 B 题队长兼建模手、编程手，以覆盖保证定理与融合式在线路径规划实现问题四平均 542.9 s/源、逼近理论下界。毓琇书院"青年科学家成长营"早期科研训练（社交媒体投资者情绪研究 · 爬虫开发主力），南大西迁 AI 纪录片制作（Seedance 2.0 · 约 330 条视频）。
+南京大学计算机科学与技术（计算机金融实验班）在读本科生，聚焦 AI 应用与大模型 Agent 工程：LLM Agent 应用、AI 可信与不确定性约束、计算几何与在线路径规划、数据分析。曾在星环科技（Transwarp）AI-Native 组合投资实训营担任量化研究员实习，主导 AlphaForge 多因子选股回测系统、事件驱动回测引擎与三大飞轮自进化系统，并参与 HABP 人机边界协议下 LLM Agent 输出约束机制设计。2026 年全国大学生数学建模竞赛 B 题（江苏赛区一等奖）队长兼编程手，负责四问全部求解代码与仿真验证，以融合式在线路径规划实现问题四平均 542.9 s/源、逼近理论下界。毓琇书院"青年科学家成长营"早期科研训练（社交媒体投资者情绪研究 · 爬虫开发主力），南大西迁 AI 纪录片制作（Seedance 2.0 · 约 330 条视频）。
